@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>労働時間差分ツール</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>月の労働時間差分ツール</h1>
+
+  <label for="username">お名前：</label>
+  <input type="text" id="username" placeholder="例: 北海太郎">
+
+  <label for="workTime">今月の労働時間（例: 60時間36分）:</label>
+  <input type="text" id="workTime" placeholder="例: 60時間36分">
+
+  <label>有給休暇の日付：</label>
+  <div id="paidLeaveList" class="date-list"></div>
+  <button onclick="addDateInput('paidLeaveList')">＋ 有給休暇日を追加</button>
+
+  <label>振替休日の日付：</label>
+  <div id="substituteLeaveList" class="date-list"></div>
+  <button onclick="addDateInput('substituteLeaveList')">＋ 振替休日を追加</button>
+
+  <button id="calculateBtn" onclick="calculate()">計算する</button>
+
+  <div id="result"></div>
+  <button id="copyBtn" onclick="copyResult()" style="display:none;">📋 結果をコピー</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
