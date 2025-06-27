@@ -1,3 +1,4 @@
+
 const targetHours = 205;
 
 async function getHolidays(year) {
@@ -64,8 +65,11 @@ async function calculate() {
   const holidays = await getHolidays(year);
   const holidayDates = Object.keys(holidays).map(d => new Date(d));
 
+  const includeToday = document.getElementById("includeToday").checked;
+  const startDay = includeToday ? now.getDate() : now.getDate() + 1;
+
   let remainingWeekdays = 0;
-  for (let day = now.getDate(); day <= new Date(year, month + 1, 0).getDate(); day++) {
+  for (let day = startDay; day <= new Date(year, month + 1, 0).getDate(); day++) {
     const date = new Date(year, month, day);
     const isWeekend = date.getDay() === 0 || date.getDay() === 6;
     const isHoliday = holidayDates.some(h => h.toDateString() === date.toDateString());
@@ -84,7 +88,7 @@ async function calculate() {
     <p><strong>${name}</strong> さんの ${monthLabel} の集計結果</p>
     <p>入力された労働時間: ${formatMinutes(totalInputMins)}</p>
     <p>205時間までの残り時間: ${formatMinutes(remainingMins)}</p>
-    <p>今月の残り営業日（本日含む）: ${remainingWeekdays}日</p>
+    <p>今月の残り営業日（${includeToday ? '本日含む' : '本日除く'}）: ${remainingWeekdays}日</p>
   `;
 
   if (paidLeaveDates.length > 0) {
