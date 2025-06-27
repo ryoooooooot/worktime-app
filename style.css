@@ -22,6 +22,7 @@ label {
   display: block;
   color: #34495e;
 }
+
 input[type="text"],
 input[type="date"],
 input[type="number"] {
@@ -46,9 +47,11 @@ button {
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
+
 button:hover {
   background-color: #2980b9;
 }
+
 button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
@@ -67,6 +70,7 @@ button#calculateBtn {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
 button#calculateBtn:hover {
   background-color: #27ae60;
 }
@@ -75,15 +79,18 @@ button#calculateBtn:hover {
 .date-list {
   margin-left: 1em;
 }
+
 .date-entry {
   display: flex;
   gap: 0.5em;
   margin-bottom: 0.5em;
   align-items: center;
 }
+
 .date-entry input[type="date"] {
   flex: 1;
 }
+
 .date-entry button {
   background-color: #e74c3c;
   font-size: 0.8em;
@@ -99,6 +106,7 @@ button#calculateBtn:hover {
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0,0,0,0.05);
 }
+
 #result p {
   margin: 0.6em 0;
   line-height: 1.6;
