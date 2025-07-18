@@ -1,1 +1,47 @@
-/* スタイル省略：前回と同一内容 */
+
+body {
+  font-family: sans-serif;
+  background: #f9f9f9;
+  padding: 2em;
+  max-width: 800px;
+  margin: auto;
+}
+h1 {
+  font-size: 1.8em;
+  color: #2c3e50;
+}
+label {
+  margin-top: 1.2em;
+  font-weight: bold;
+  display: block;
+}
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.3em;
+  box-sizing: border-box;
+}
+button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+#calculateBtn {
+  background-color: #2ecc71;
+  width: 100%;
+  font-size: 1.2rem;
+  margin: 2em 0;
+}
+.result-highlight {
+  background: #fef9e7;
+  padding: 1em;
+  border-left: 5px solid #f1c40f;
+  margin-top: 1.5em;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #d35400;
+}
